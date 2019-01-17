@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87a62b6-458f-422f-9e94-9915e5fb6afd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ex1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex2/Run.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex2/Run.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Ex2/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Ex2/CalculatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CalculatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
+            <state relative-caret-position="173">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#228#229#0" expanded="true" />
                 <element signature="e#279#280#0" expanded="true" />
@@ -27,25 +29,26 @@
                 <element signature="e#393#394#0" expanded="true" />
                 <element signature="e#455#456#0" expanded="true" />
                 <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/CalculatorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/Run.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="161">
+              <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Run.java">
+        <entry file="file://$PROJECT_DIR$/test/CalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="23" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -68,12 +71,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Calculate.java" />
-        <option value="$PROJECT_DIR$/src/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/Run.java" />
         <option value="$PROJECT_DIR$/src/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/test/src/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/test/test.iml" />
+        <option value="$PROJECT_DIR$/src/Calculator.java" />
         <option value="$PROJECT_DIR$/test/CalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/Run.java" />
       </list>
     </option>
   </component>
@@ -89,8 +92,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,13 +128,14 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547732473295" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547739597805" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -156,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest.pow">
+  <component name="RunManager" selected="Application.Run">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Run" />
       <module name="Ex2" />
@@ -194,10 +198,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Run" />
         <item itemvalue="JUnit.CalculatorTest.pow" />
         <item itemvalue="JUnit.CalculatorTest.add" />
         <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="Application.Run" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +216,9 @@
       <option name="presentableId" value="Default" />
       <updated>1547630655279</updated>
       <workItem from="1547630657719" duration="11461000" />
-      <workItem from="1547729913814" duration="2543000" />
+      <workItem from="1547729913814" duration="5571000" />
+      <workItem from="1547737700499" duration="1892000" />
+      <workItem from="1547742678131" duration="237000" />
     </task>
     <servers />
   </component>
@@ -249,13 +255,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14004000" />
+    <option name="totallyTimeSpent" value="19161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12178517" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12481089" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,7 +269,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32411674" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32411674" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -289,21 +294,43 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Run.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Run.java</url>
+          <line>42</line>
+          <properties class="Run" method="menu">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="run.res" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>run.res</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/src/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/CalculatorTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/CalculatorTest.java" />
     <entry file="file://$PROJECT_DIR$/test/test.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -311,17 +338,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Run.java">
+    <entry file="file://$PROJECT_DIR$/test/CalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        <state relative-caret-position="173">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#228#229#0" expanded="true" />
             <element signature="e#279#280#0" expanded="true" />
@@ -329,14 +356,15 @@
             <element signature="e#393#394#0" expanded="true" />
             <element signature="e#455#456#0" expanded="true" />
             <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CalculatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Run.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="161">
+          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
         </state>
       </provider>
     </entry>

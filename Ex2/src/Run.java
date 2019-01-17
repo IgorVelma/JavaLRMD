@@ -2,7 +2,12 @@
 import java.util.Scanner;
 
 public class Run {
-    public static void switcher(Calculator calc, String _f, String _s, int operation, double res) {
+     boolean useRes;
+     double res;
+
+
+    public void switcher(Calculator calc, String _f, String _s, int operation, double res) {
+        this.res = res;
         switch (operation) {
             case 1:
                 calc.add(Double.parseDouble(_f), Double.parseDouble(_s));
@@ -34,61 +39,65 @@ public class Run {
             default:
                 System.out.println("Not in menu!");
         }
-
+    }
+    public void menu(Calculator calc,String first, String second,double res ){
+        Scanner scan = new Scanner(System.in);
+        int operation;
+        do {
+            System.out.println("first:" + first + " second: " + second + "\n1.'+';\n2.'-';\n3.'*';\n4.'/';\n5.'^';\n6.Exit program!");
+            operation = scan.nextInt();
+            switcher(calc, first, second, operation, res);
+            String useRe = scan.next();
+            useRe.toLowerCase();
+            if (useRe.equals("yes")) {
+                useRes = true;
+                break;
+            } else {
+                useRes = false;
+                calc.cleanResult();
+                break;
+            }
+           // UsingResult(calc, useRes);
+        }while ((operation > 0 || operation < 8));
+    }
+    public boolean UsingResult(Calculator calc, boolean use){
+        this.useRes = use;
+        Scanner scan = new Scanner(System.in);
+        String useResult = scan.next();
+        useResult.toLowerCase();
+        if (useResult.equals("yes")) {
+            useRes = true;
+            //break;
+        } else {
+            useRes = false;
+            calc.cleanResult();
+            //break;
+        }
+        return useRes;
     }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
+        Run run = new Run();
         Calculator calc = new Calculator();
         String exit = "no";
-        boolean useResult = false;
+        //boolean useResult = false;
         String first, second, third;
         do {
-            double res = calc.getResult();
-            if (!useResult) {
+             //run.res = calc.getResult();
+            if (!run.useRes) {
                 System.out.println("Input first number: ");
                 first = scan.next();
                 System.out.println("Input second number: ");
                 second = scan.next();
                 System.out.println("Choose operation: ");
-                int operation;
-                do {
-                    System.out.println("first:" +first+" second: "+second+"\n1.'+';\n2.'-';\n3.'*';\n4.'/';\n5.'^';\n6.Exit program!");
-                    operation = scan.nextInt();
-                    switcher(calc, first, second, operation, res);
-                    String useRes = scan.next();
-                    useRes.toLowerCase();
-                    if (useRes.equals("yes")) {
-                        useResult = true;
-                        break;
-                    } else {
-                        useResult = false;
-                        calc.cleanResult();
-                        break;
-                    }
-                } while ((operation > 0 || operation < 8));
-            } else {
 
+                run.menu(calc, first, second, run.res);
+            } else {
                 System.out.println("Input second number: ");
                 third = scan.next();
                 System.out.println("Choose operation: ");
-                int operation;
-                do {
-                    System.out.println("first:" +res+" second: "+third+"\n1.'+';\n2.'-';\n3.'*';\n4.'/';\n5.'^';\n6.Exit program!");
-                    operation = scan.nextInt();
-                    switcher(calc, Double.toString(res), third, operation, res);
-                    String useRes = scan.next();
-                    useRes.toLowerCase();
-                    if (useRes.equals("yes")) {
-                        useResult = true;
-                        break;
-                    } else {
-                        calc.cleanResult();
-                        useResult = false;
-                        break;
-                    }
-                } while ((operation > 0 || operation < 8));
+                run.menu(calc, Double.toString(run.res), third, run.res);
             }
         } while (!exit.equals("yes"));
     }

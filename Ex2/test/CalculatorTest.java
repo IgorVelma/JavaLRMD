@@ -16,4 +16,11 @@ public class CalculatorTest {
         c.pow(2, 2);
         assertEquals(4, c.getResult(), 0.1);
     }
+    @Test
+    public void UseRes(){
+        Run r = new Run();
+        Calculator calc = new Calculator();
+//        r.UsingResult(false);
+//        assertEquals();
+    }
 }
