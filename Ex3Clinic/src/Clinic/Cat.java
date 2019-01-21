@@ -20,8 +20,8 @@ public class Cat implements Pet {
     @Override
     public  String SetName(){
         Scanner scan = new Scanner(System.in);
-        String nameOfThePet;
         System.out.println("Input name of the pet: ");
+        String nameOfThePet;
         nameOfThePet = scan.nextLine();
         this.name = nameOfThePet;
         return this.name;

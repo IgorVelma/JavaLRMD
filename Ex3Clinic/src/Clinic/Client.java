@@ -7,15 +7,20 @@ public class Client
 {
 
     private String id;
-    private final Pet pet;
+    private Pet pet;
+    private Animal animal;
 
     public Client(String id, Pet pet){
         this.id = id;
         this.pet = pet;
         pet.setDate();
     }
+    public Client(String id, Animal animal){
+        this.id = id;
+        this.animal = animal;
+    }
     public String  Bla(){
-        return "Client name: " + this.id + " - Pet: '" + this.pet.GetName()+"' " + this.pet.getDate();
+        return "Client name: " + this.id + " - Pet: '" + this.pet.GetName()+"' "+ this.pet.getDate();
     }
     public String getPetName(){
         return this.pet.GetName();

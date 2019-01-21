@@ -52,10 +52,10 @@ public class Dog implements Pet {
         this.year = period.getYears();
     }
 
-    public String toStringInfo(){
+    private String toStringInfo(){
         return this.day+".0"+this.month+"."+this.year;
     }
-    public String toStringNow(){
+    private String toStringNow(){
         Calendar now = Calendar.getInstance();
         return now.get(Calendar.DATE)+".0" +(now.get(Calendar.MONTH)+1)+"."+ now.get(Calendar.YEAR);
     }

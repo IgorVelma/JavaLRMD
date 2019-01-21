@@ -14,6 +14,7 @@ public class Main {
         clinic.addClient(new Client("Vika", new Cat("Kisa")));
         clinic.addClient(new Client("Dimon", cat));
         clinic.addClient(new Client("Somin", new Dog("Slim", 13,4, 2016)));
+        //clinic.addClient(new Client("Petr", new CatDog(new Cat("Vasek"), new Dog("Dusek", 13,4, 2016))));
         clinic.showClients();
         System.out.println("\nAfter delete\n");
         clinic.deleteClient(1);
