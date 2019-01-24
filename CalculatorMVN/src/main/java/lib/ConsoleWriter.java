@@ -52,7 +52,7 @@ public class ConsoleWriter {
         ConsoleWriter.Write("Use previous result? (Y/N): ");
         String answer = ConsoleWriter.Read();
         ConsoleWriter.Write("");
-        if(answer.toLowerCase().equals("y")) {
+        if(answer.toLowerCase().equals("y")|| "yes".equals(answer.toLowerCase())) {
             isUse = true;
         }
         return isUse;
@@ -107,7 +107,7 @@ public class ConsoleWriter {
      * */
     public static boolean isExit(){
         boolean exit = false;
-        ConsoleWriter.Write("You want exit? (Y/N): ");
+        ConsoleWriter.Write("Do you want exit? (Y/N): ");
         String exitString = ConsoleWriter.Read();
         ConsoleWriter.Write("");
         if(exitString.toLowerCase().equals("yes") ||exitString.toLowerCase().equals("y")){
