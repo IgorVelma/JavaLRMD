@@ -2,6 +2,8 @@ package Clinic;
 
 import lib.*;
 
+import javax.jws.soap.SOAPBinding;
+
 public class Clinic {
 
     private Client[] clients;
@@ -17,11 +19,16 @@ public class Clinic {
      * Add client method without params
      * */
     private void addClient() {
-        Client client = ConsoleWorker.newClient();
-        if (pos == size) {
-            ConsoleWorker.Write("Clinic is full!");
-        } else {
-            clients[++pos] = client;
+        try {
+            Client client = ConsoleWorker.newClient();
+            if (pos == size) {
+                ConsoleWorker.Write("The clinic is full!");
+            } else {
+                clients[++pos] = client;
+            }
+        }catch (UserExceptionHandle ex){
+            ConsoleWorker.Write(ex.getMessage());
+            ConsoleWorker.Write("A client not add in the clinic!");
         }
     }
 
@@ -39,34 +46,42 @@ public class Clinic {
     private void deleteClient() {
         int i;
         int numberOfTheClient = ConsoleWorker.askClientNumber();
-        if (pos < 0) {
-            ConsoleWorker.Write("Clinic is empty!");
-        } else {
-            for (i = 0; i < this.size; ++i) {
-                if ((numberOfTheClient-1) == (pos - 1)) {
-                    break;
+            if (pos < 0) {
+                ConsoleWorker.Write("Clinic is empty!");
+            } else {
+                if (this.clients[numberOfTheClient - 1] != null) {
+                    for (i = 0; i < this.size; ++i) {
+                        if ((numberOfTheClient - 1) == (pos - 1)) {
+                            ConsoleWorker.Write("Deleted!!");
+                            break;
+                        }
+                    }
+                    for (int j = i; j < this.size - 1; ++j) {
+                        this.clients[j] = this.clients[j + 1];
+                    }
+                    --this.pos;
+                }else{
+                    ConsoleWorker.Write("No client to delete!");
                 }
             }
-            for (int j = i; j < this.size - 1; ++j) {
-                this.clients[j] = this.clients[j + 1];
-            }
-            --this.pos;
-        }
-        ConsoleWorker.Write("Deleted!!");
     }
 
     private void renameClient() {
         showClients();
         boolean isRenamed = false;
+        int position = ConsoleWorker.askClientNumber();
         while (!isRenamed) {
             try {
-                int position = ConsoleWorker.askClientNumber();
                 for (int i = 0; i < size; ++i) {
                     if (i == (position - 1)) {
                         ConsoleWorker.Write("Client: " + clients[i].getClientName());
-                        clients[i].setClientName();
-                        ConsoleWorker.Write("Renamed!");
-                        isRenamed = true;
+                        try {
+                            clients[i].setClientName();
+                            isRenamed = true;
+                        }catch (UserExceptionHandle ex){
+                            ConsoleWorker.Write(ex.getMessage());
+                            isRenamed = false;
+                        }
                     }
                 }
             } catch (NullPointerException e) {
@@ -78,14 +93,18 @@ public class Clinic {
     private void renamePet() {
         showClients();
         boolean isRenamed = false;
+        int position = ConsoleWorker.askClientNumber();
         while (!isRenamed) {
             try {
-                int position = ConsoleWorker.askClientNumber();
                 for (int i = 0; i < size; ++i) {
                     if (i == (position - 1)) {
                         ConsoleWorker.Write("Pet: " + clients[i].getPetName());
-                        clients[i].setPetName();
-                        ConsoleWorker.Write("Renamed!");
+                        try {
+                            clients[i].setPetName();
+                        }catch (UserExceptionHandle ex){
+                            isRenamed = false;
+                            ConsoleWorker.Write(ex.getMessage());
+                        }
                         isRenamed = true;
                     }
                 }
@@ -93,6 +112,7 @@ public class Clinic {
                 ConsoleWorker.Write("Invalid number!");
             }
         }
+        ConsoleWorker.Write("Renamed!");
     }
 
     private void findClientOrPet() {

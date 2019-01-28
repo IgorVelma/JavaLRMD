@@ -15,9 +15,15 @@ public class Cat implements Pet {
     }
 
     @Override
-    public String setName(String nameClient){
+    public String setName(String nameClient) throws UserExceptionHandle{
         String message = String.format("Input name of a pet of %s: ", nameClient);
-        this.petName = ConsoleWorker.askWrite(message);
+        String tmpPetName = ConsoleWorker.askWrite(message);
+        if(this.petName.length()<1){
+            throw new UserExceptionHandle("A name length need to be > 1");
+        }else{
+            this.petName = tmpPetName;
+            ConsoleWorker.Write("Renamed!");
+        }
         return this.petName;
     }
 }

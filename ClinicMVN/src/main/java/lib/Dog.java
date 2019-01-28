@@ -2,20 +2,26 @@ package lib;
 
 public class Dog implements Pet {
 
-    private String name;
+    private String petName;
 
     public Dog(String nameOfADog){
-        this.name = nameOfADog;
+        this.petName = nameOfADog;
     }
 
 
     public String getPetName(){
-        return this.name;
+        return this.petName;
     }
-    public String setName(String nameClient){
+
+    @Override
+    public String setName(String nameClient) throws UserExceptionHandle{
         String message = String.format("Input name of a pet of %s: ", nameClient);
-        this.name = ConsoleWorker.askWrite(message);
-        return this.name;
+        String tmpPetName = ConsoleWorker.askWrite(message);
+        if(tmpPetName.length()>1){}else{
+            throw new UserExceptionHandle("A name length need to be > 1");
+        }
+        this.petName = tmpPetName;
+        return this.petName;
     }
 
 }

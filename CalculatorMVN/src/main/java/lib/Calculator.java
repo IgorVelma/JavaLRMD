@@ -48,6 +48,6 @@ public class Calculator {
         return result;
     }
     public void clearResult(){
-        this.result=0;
+        this.result = 0;
     }
 }
